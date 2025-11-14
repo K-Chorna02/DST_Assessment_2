@@ -6,7 +6,7 @@ Group project for Data Science Toolbox
 - Kateryna Chorna  
 - Harry Clarke  
 - Minnie Jacobs
-- James  
+- James Railton
  
 This project is equally owned by the four project partners.
 
