@@ -8,7 +8,7 @@ Group project for Data Science Toolbox
 - Minnie Jacobs
 - James  
  
-This project is equally owned by the five project partners.
+This project is equally owned by the four project partners.
 
 ## Reading Order
 All report content is in the directory:
