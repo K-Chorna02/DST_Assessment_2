@@ -23,3 +23,6 @@ The report takes the following structure:
 With html output of the ... content included for convenience.
 
 ## Description
+Throughout our project we focus on two data sets; the CIFAR 10 and Food 101 datasets. The smaller CIFAR-10 dataset is used as a toy data set to explore optimization, specifically focusing on the number of convolution layers and (as an extention: visualise what the output of each layer looks like. ) 
+
+We focus our exploration on 2 pre-trained models, ResNet-18 and Transforms. 
