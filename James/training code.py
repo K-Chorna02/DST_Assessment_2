@@ -59,8 +59,8 @@ test_tf = transforms.Compose([
 train_data = Food101(root='./data', split='train', download=True, transform=train_tf)
 test_data  = Food101(root='./data', split='test',  download=True, transform=test_tf)
 
-train_loader = DataLoader(train_data, batch_size=batch_size, shuffle=True,  num_workers=4)
-test_loader  = DataLoader(test_data,  batch_size=batch_size, shuffle=False, num_workers=4)
+train_loader = DataLoader(train_data, batch_size=batch_size, shuffle=True)
+test_loader  = DataLoader(test_data,  batch_size=batch_size, shuffle=False)
 
 # -------------------------
 # Model
