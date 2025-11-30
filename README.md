@@ -12,14 +12,13 @@ This project is equally owned by the four project partners.
 
 ## Reading Order
 All report content is in the directory:
-- Report/
-  
+- Report
 The Report folder takes the following structure:
 
 - Models
 - Report.ipy
 - References.bib
-- 
+
 Due to the fact we are using models that required long training loops, we have included a folder of all of our trained models, the code and the results, and when discussing this have loaded them into the report notebook via github.
 The Report is rather dense since it includes a full exploration of our datasets, models and conclusions.
 It takes the following structure:
