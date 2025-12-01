@@ -164,9 +164,8 @@ for epoch in range(epochs):
         f"Best Acc={best_acc:.4f}"
     )
 
-# -------------------------
+
 # Save metrics and final model
-# -------------------------
 df = pd.DataFrame(log)
 df.to_csv("resnet18_food101_metrics.csv", index=False)
 print("Saved metrics → resnet18_food101_metrics.csv")
