@@ -1,0 +1,24 @@
+Here is the discussion on scalability for our project: 
+##Scalability
+
+
+Throughout this project we have scaled what we learnt on our smaller toy dataset, CIFAR-10, to a more deployable, real-world dataset, Food101.  We have assessed how different model architectures perform on these and evaluated their robustness on corrupted images. 
+
+However, if we were to increase the data volume by a factor of 1000, this would require a change in the way we trained our models, since these already took approx 18h to run for each model. This means we would require more GPUs to train on large datasets and some alterations to our strategies. We would require access to high-performance computing resources such as multi-core GPUs and distributive training. 
+
+In industry settings, data parallelism allows large training batches to be split across multiple devices, increasing throughput, as discussed in the section above. One of our models, the Vision Transformer, benefits particularly strongly from multi-GPU setups because its attention layers involve large matrix multiplications that scale linearly with available parallel compute. CNNs are very parallelisable, since convolutions can be processed in parallel over batches and channels, this means our CNN architectures such as ResNet would scale well.
+
+Our models (ResNet and SLViT) already use mini-batch stochastic gradient descent, meaning that the training algorithm naturally scales to large datasets since we stream our data in batches rather than all at once. This means our models should scale well to larger data.
+
+We used a transfer learning approach for some of our models, which if our data were to increase in volume would scale very well. Since our feature extraction uses pre-trained knowledge, this would dramatically reduce training complexity as it would only require adjusting the final layers and fine-tuning selectively.
+
+
+We used PyTorch data loaders throughout our models, these are already compatible with distributed training since they support the use of multi-core workers. Our model architecture could therefore be extended to multi-node frameworks such as PyTorch Distributed or Horovod without redesign. This way, the same architecture and training code could be used on a cluster/cloud based GPU environment by switching to distributed training.
+
+The model architectures we used were already designed for industrial-scale datasets, and we had to adjust these frameworks to work for our lower resolution images. However since ResNet18 was already traded on ImageNet (which is composed of 1.2 million high-res images with 1000 classes). 
+
+As we read in [], Vision Transformers are trained on such as JFT-300M which is even larger, and therefore is likely to scale even better than the ResNet architecture. We also saw from our results that the accuracies for ViT were higher than for ResNet when we used a larger dataset (Food101), so we expect this modelling approach to scale better for datasets that are 1000 times larger in volume. A larger amount of data often improves ViT performance, as they are provided with more information to train on. 
+
+For our robustness tests, these wouldn’t need to change as these can already be scaled to datasets of larger volume , these corruptions were representative of real-world image scenarios. 
+
+For t-SNE and PCA, these were interesting to explore on smaller datasets where we have a small number of classes, however if we were to scale these to cases where we had over 1000 times more data and 101 classes for food101, it would be difficult to use these visualisations, so would have to find other ways to demonstrate feature extraction. 
