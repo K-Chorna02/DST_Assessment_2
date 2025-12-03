@@ -15,9 +15,12 @@ All report content is in the directory:
 - Report
 The Report folder takes the following structure:
 
-- Models
+- Supplementary
+  -  Model_architecture
+  -  Trained_models
+  -  results_graph
+  -  training_loops
 - Report.ipy
-- References.bib
 
 Due to the fact we are using models that required long training loops, we have included a folder of all of our trained models, the code and the results, and when discussing this have loaded them into the report notebook via github.
 The Report is rather dense since it includes a full exploration of our datasets, models and conclusions.
