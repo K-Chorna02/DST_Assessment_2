@@ -24,20 +24,23 @@ The Report folder takes the following structure:
 
 Due to the fact we are using models that required long training loops, we have included a folder of all of our trained models, the code and the results, and when discussing this have loaded them into the report notebook via github.
 The Report is rather dense since it includes a full exploration of our datasets, models and conclusions.
-It takes the following structure:
-- Intro
-- About our datasets
-   - CIFAR10
-   - Food101
-- EDA
-- Methods
-  - Optimisation on CIFAR10
-  - ResNet18
-  - ViT
-  - Robustness
- - Scalability
- - Results
- - References
+It takes the following structure (note: only included key headings):
+
+-Introduction
+-Limitations
+-Libraries
+-About our datasets 
+	- CIFAR-10
+	- Food101
+-Overview of our project 
+-Optimisation using CIFAR-10
+-Models
+-Performance comparison
+-Testing robustness
+-t-SNE on Gaussian noise 
+-Parallelism and scalability 
+-Discussion
+-References
 
 ## Description
 Throughout our project we focus on two data sets; the CIFAR 10 and Food 101 datasets. The smaller CIFAR-10 dataset is used as a toy data set to explore optimisation, specifically focusing on the number of convolution layers. 
