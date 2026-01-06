@@ -1,5 +1,7 @@
 # DST_Assessment_2
-Group project for Data Science Toolbox
+Group project for Data Science Toolbox.
+
+This project explores image classification using modern deep learning techniques as part of the Data Science Toolbox module. Working with the CIFAR‑10 and Food‑101 datasets, we investigate how different neural network architectures perform in terms of accuracy, efficiency, and robustness. Our analysis covers convolutional neural networks, ResNet18, Vision Transformers (ViT), and transfer learning, with a focus on optimisation, scalability, and model behaviour under noise. The repository includes all trained models, code, results, and a detailed report documenting our methodology and findings.
 
 ## Project Group 
 
